@@ -1,18 +1,9 @@
-# SkyLink Vercel Proxy (No-Cloudflare)
+# SkyLink Vercel Proxy (Fixed Runtime)
 
-This project serves your Wix site (`https://www.skylinksimulations.com`) under a clean Vercel URL so TikTok won't block it.
+Deploy steps:
+1) Create a GitHub repo and upload these files (keep the `api/` folder).
+2) Go to https://vercel.com/new → Import the repo → Deploy.
+3) You’ll get a `.vercel.app` URL that proxies https://www.skylinksimulations.com.
 
-## Deploy (2 minutes)
-
-1. Create a **new GitHub repo** and upload these files.
-2. Go to **https://vercel.com/new** → Import your repo → **Deploy**.
-3. You'll get a URL like `https://skylink-vercel-proxy.vercel.app`.
-4. Put that URL in your TikTok bio. It will load your Wix site without exposing the blocked root domain.
-
-### Optional: Custom Domain
-In Vercel Project → **Settings → Domains** → add your domain (e.g. `flywithskylink.com`) and follow the DNS steps.
-
-## Files
-- `api/proxy.ts` — serverless function that proxies and rewrites links/redirects.
-- `vercel.json` — routes all paths to the proxy function.
-- `package.json` — minimal project descriptor.
+This version sets the runtime to `@vercel/node@3` to fix the
+“Function Runtimes must have a valid version” build error.
