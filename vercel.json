@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/proxy.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/proxy.ts"
+    }
+  ]
+}
