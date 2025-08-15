@@ -1,7 +1,4 @@
 {
-  "name": "skylink-vercel-proxy",
-  "private": true,
-  "devDependencies": {
-    "@vercel/node": "3.0.20"
-  }
+  "name": "skylink-vercel-proxy-js",
+  "private": true
 }

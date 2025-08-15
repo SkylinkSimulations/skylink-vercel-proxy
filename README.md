@@ -1,9 +1,8 @@
-# SkyLink Vercel Proxy (Fixed Runtime)
+# SkyLink Vercel Proxy (JS, no runtime config)
 
-Deploy steps:
-1) Create a GitHub repo and upload these files (keep the `api/` folder).
-2) Go to https://vercel.com/new → Import the repo → Deploy.
-3) You’ll get a `.vercel.app` URL that proxies https://www.skylinksimulations.com.
+This version uses a plain Node.js Function (`api/proxy.js`) so you don't need to set any runtime.
+Vercel defaults to Node 20. Deploy steps:
 
-This version sets the runtime to `@vercel/node@3` to fix the
-“Function Runtimes must have a valid version” build error.
+1) Upload these files to a GitHub repo.
+2) Go to https://vercel.com/new → Import repo → Deploy.
+3) Use the `.vercel.app` URL in TikTok.

@@ -1,14 +1,9 @@
 {
   "version": 2,
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "@vercel/node@3"
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/proxy.ts"
+      "dest": "api/proxy.js"
     }
   ]
 }
